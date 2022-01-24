@@ -8,110 +8,120 @@
 
 	<body>
 		<main id="main-doc">
-			<section class="main-section">
-				<header id="Hello_World">Hello World</header>
-				<p>The smallest React example looks like this:</p>
-				<code
-					>ReactDOM.render(
-					<span>Hello, world!</span>
-					, document.getElementById('root') );</code
-				>
-				<p>It displays a heading saying “Hello, world!” on the page.</p>
-			</section>
-			<section class="main-section">
-				<header id="Introducing_JSX">Introducing JSX</header>
-				<p>Consider this variable declaration:</p>
-				<code>const element = <span>Hello, world!</span>;</code>
-				<p>
-					This funny tag syntax is neither a string nor HTML. It is
-					called JSX, and it is a syntax extension to JavaScript. We
-					recommend using it with React to describe what the UI should
-					look like. JSX may remind you of a template language, but it
-					comes with the full power of JavaScript.
-				</p>
-			</section>
-			<section class="main-section">
-				<header id="Rendering_Elements">Rendering Elements</header>
-				<p>
-					Elements are the smallest building blocks of React apps. An
-					element describes what you want to see on the screen:
-				</p>
-				<code>const element = <span>Hello, world</span>;</code>
-				<p>
-					Unlike browser DOM elements, React elements are plain
-					objects, and are cheap to create. React DOM takes care of
-					updating the DOM to match the React elements.
-				</p>
-			</section>
-			<section class="main-section">
-				<header id="Components_and_Props">Components and Props</header>
-				<p>
-					Components let you split the UI into independent, reusable
-					pieces, and think about each piece in isolation. This page
-					provides an introduction to the idea of components. You can
-					find a detailed component API reference here. Conceptually,
-					components are like JavaScript functions. They accept
-					arbitrary inputs (called “props”) and return React elements
-					describing what should appear on the screen.
-				</p>
-				<code
-					>function Welcome(props) { return
-					<span>Hello, {props.name}</span>; }</code
-				>
-				<p>
-					The simplest way to define a component is to write a
-					JavaScript function:
-				</p>
-			</section>
-			<section class="main-section">
-				<header id="State_and_Lifecycle">State and Lifecycle</header>
-				<p>
-					This page introduces the concept of state and lifecycle in a
-					React component. You can find a detailed component API
-					reference here. Consider the ticking clock example from one
-					of the previous sections. In Rendering Elements, we have
-					only learned one way to update the UI. We call
-					ReactDOM.render() to change the rendered output:
-				</p>
-				<code
-					>function tick() { const element = (
-					<div>
+			<nav id="navbar">
+				<header>REACT DOCUMENTATION</header>
+				<a class="nav-link" href="#Hello_World">Hello World</a>
+				<a class="nav-link" href="#Introducing_JSX">Introducing JSX</a>
+				<a class="nav-link" href="#Rendering_Elements">Rendering Elements</a>
+				<a class="nav-link" href="#Components_and_Props">Components and Props</a>
+				<a class="nav-link" href="#State_and_Lifecycle">State and Lifecycle</a>
+			</nav>
+			<div class="container">
+				<section id="Hello_World" class="main-section">
+					<header>Hello World</header>
+					<p>The smallest React example looks like this:</p>
+					<code
+						>ReactDOM.render(
 						<span>Hello, world!</span>
-						<span>It is {new Date().toLocaleTimeString()}.</span>
-					</div>
-					); ReactDOM.render( element, document.getElementById('root')
-					); } setInterval(tick, 1000);</code
-				>
-				<p>
-					In this section, we will learn how to make the Clock
-					component truly reusable and encapsulated. It will set up
-					its own timer and update itself every second. We can start
-					by encapsulating how the clock looks:
-				</p>
-				<code>
-					function Clock(props) { return (
-					<div>
-						<span>Hello, world!</span>
-						<span>It is {props.date.toLocaleTimeString()}.</span>
-					</div>
-					); } function tick() { ReactDOM.render(
-					<Clock date="{new" Date()} />,
-					document.getElementById('root') ); } setInterval(tick,
-					1000);
-				</code>
-				<ul>
-					<li>
-						Create an ES6 class, with the same name, that extends
-						React.Component.
-					</li>
-					<li>Add a single empty method to it called render().</li>
-					<li>
-						Move the body of the function into the render() method.
-					</li>
-					<li>Replace props with this.props in the render() body.</li>
-					<li>Delete the remaining empty function declaration.</li>
-				</ul>
-			</section>
+						, document.getElementById('root') );</code
+					>
+					<p>It displays a heading saying “Hello, world!” on the page.</p>
+				</section>
+				<section id="Introducing_JSX" class="main-section">
+					<header>Introducing JSX</header>
+					<p>Consider this variable declaration:</p>
+					<code>const element = <span>Hello, world!</span>;</code>
+					<p>
+						This funny tag syntax is neither a string nor HTML. It is
+						called JSX, and it is a syntax extension to JavaScript. We
+						recommend using it with React to describe what the UI should
+						look like. JSX may remind you of a template language, but it
+						comes with the full power of JavaScript.
+					</p>
+				</section>
+				<section id="Rendering_Elements" class="main-section">
+					<header>Rendering Elements</header>
+					<p>
+						Elements are the smallest building blocks of React apps. An
+						element describes what you want to see on the screen:
+					</p>
+					<code>const element = <span>Hello, world</span>;</code>
+					<p>
+						Unlike browser DOM elements, React elements are plain
+						objects, and are cheap to create. React DOM takes care of
+						updating the DOM to match the React elements.
+					</p>
+				</section>
+				<section id="Components_and_Props" class="main-section">
+					<header>Components and Props</header>
+					<p>
+						Components let you split the UI into independent, reusable
+						pieces, and think about each piece in isolation. This page
+						provides an introduction to the idea of components. You can
+						find a detailed component API reference here. Conceptually,
+						components are like JavaScript functions. They accept
+						arbitrary inputs (called “props”) and return React elements
+						describing what should appear on the screen.
+					</p>
+					<code
+						>function Welcome(props) { return
+						<span>Hello, {props.name}</span>; }</code
+					>
+					<p>
+						The simplest way to define a component is to write a
+						JavaScript function:
+					</p>
+				</section>
+				<section  id="State_and_Lifecycle" class="main-section">
+					<header>State and Lifecycle</header>
+					<p>
+						This page introduces the concept of state and lifecycle in a
+						React component. You can find a detailed component API
+						reference here. Consider the ticking clock example from one
+						of the previous sections. In Rendering Elements, we have
+						only learned one way to update the UI. We call
+						ReactDOM.render() to change the rendered output:
+					</p>
+					<code
+						>function tick() { const element = (
+						<div>
+							<span>Hello, world!</span>
+							<span>It is {new Date().toLocaleTimeString()}.</span>
+						</div>
+						); ReactDOM.render( element, document.getElementById('root')
+						); } setInterval(tick, 1000);</code
+					>
+					<p>
+						In this section, we will learn how to make the Clock
+						component truly reusable and encapsulated. It will set up
+						its own timer and update itself every second. We can start
+						by encapsulating how the clock looks:
+					</p>
+					<code>
+						function Clock(props) { return (
+						<div>
+							<span>Hello, world!</span>
+							<span>It is {props.date.toLocaleTimeString()}.</span>
+						</div>
+						); } function tick() { ReactDOM.render(
+						<Clock date="{new" Date()} />,
+						document.getElementById('root') ); } setInterval(tick,
+						1000);
+					</code>
+					<ul>
+						<li>
+							Create an ES6 class, with the same name, that extends
+							React.Component.
+						</li>
+						<li>Add a single empty method to it called render().</li>
+						<li>
+							Move the body of the function into the render() method.
+						</li>
+						<li>Replace props with this.props in the render() body.</li>
+						<li>Delete the remaining empty function declaration.</li>
+					</ul>
+				</section>
+			</div>
 		</main>
 
 		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
