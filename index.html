@@ -20,11 +20,11 @@
 				<section id="Hello_World" class="main-section">
 					<header>Hello World</header>
 					<p>The smallest React example looks like this:</p>
-					<code
-						>ReactDOM.render(
+					<code>
+						ReactDOM.render(
 						<span>Hello, world!</span>
-						, document.getElementById('root') );</code
-					>
+						, document.getElementById('root') );
+					</code>
 					<p>It displays a heading saying “Hello, world!” on the page.</p>
 				</section>
 				<section id="Introducing_JSX" class="main-section">
@@ -82,15 +82,15 @@
 						only learned one way to update the UI. We call
 						ReactDOM.render() to change the rendered output:
 					</p>
-					<code
-						>function tick() { const element = (
+					<code>
+						`function tick() { const element = (
 						<div>
 							<span>Hello, world!</span>
 							<span>It is {new Date().toLocaleTimeString()}.</span>
 						</div>
 						); ReactDOM.render( element, document.getElementById('root')
-						); } setInterval(tick, 1000);</code
-					>
+						); } setInterval(tick, 1000);`
+					</code>
 					<p>
 						In this section, we will learn how to make the Clock
 						component truly reusable and encapsulated. It will set up
