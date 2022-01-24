@@ -29,7 +29,9 @@
 }
 
 code {
-	background-color: grey;
+    background-color: rgb(231, 228, 228);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 header {
